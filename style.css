@@ -3,3 +3,32 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body{
+width: 100vw;
+height: 100vh;
+}
+
+main{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  place-content: center;
+}
+
+nav{
+  background: #000;
+  height: 100vh;
+  display: gird;
+  place-content: center;
+  }
+
+nav ul li{
+  display: block;
+  list-style: none;
+  padding: 1rem;
+}
+i{
+  color: aliceblue;
+}
