@@ -25,32 +25,49 @@ nav {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-left: 1.5em;
+  padding-left: 2.5em;
 }
 
 nav ul li {
   display: block;
   list-style: none;
-  padding: 1rem;
-  overflow: hidden;
+  padding: 0.3rem;
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1em;
+}
+
+nav ul li p {
+  color: #fff;
+  opacity: 0;
+  transition: 1s;
+  transition: opacity 0.2s;
+  transition: transform 0.25s 0.1s;
+}
+
+nav ul li:hover p {
+  opacity: 1;
+  transform: translateX(10px);
 }
 
 nav ul li a {
   overflow: hidden;
-  transition: 0.3s ;
-  padding: 1em;
+  transition: 0.3s;
+  /* padding: 1em; */
+  height: 50px;
+  width: 50px;
+  display: grid;
+  place-content: center;
 }
 
-nav ul li a:hover {
+nav ul li:hover a {
   border: 2px solid white;
   border-radius: 50%;
-  padding: 0.5em;
-}
-
-.home::after{
-  content: "HOME";
-  color: #fff;
-  margin-left: 1em;
+  transform: translateX(-5px);
+  
 }
 
 i {
@@ -65,13 +82,14 @@ article {
 article h1 {
   font-family: var(--main-font);
 }
+
 .img {
   position: absolute;
   top: 50%;
   left: 25%;
   transform: translateY(-50%);
   width: 20%;
-  height: 35%;
+  height: 40%;
   aspect-ratio: 1;
 }
 
@@ -112,4 +130,5 @@ article button:hover {
   font-weight: 600;
   color: #fff;
   background: #000;
+  cursor: pointer;
 }
