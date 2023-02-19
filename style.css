@@ -26,6 +26,7 @@ nav {
   display: flex;
   align-items: center;
   padding-left: 2.5em;
+  animation: nav 1s;
 }
 
 nav ul li {
@@ -67,7 +68,6 @@ nav ul li:hover a {
   border: 2px solid white;
   border-radius: 50%;
   transform: translateX(-5px);
-  
 }
 
 i {
@@ -131,4 +131,13 @@ article button:hover {
   color: #fff;
   background: #000;
   cursor: pointer;
+}
+
+@keyframes nav {
+  from {
+    transform: translateX(-15%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }
