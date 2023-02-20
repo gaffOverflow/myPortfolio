@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   --main-font: "Chonburi", cursive;
-  --link-font: 'Cardo', serif;
+  --link-font: "Cardo", serif;
   outline: 1px solid green;
 }
 
@@ -84,8 +84,8 @@ section {
 
 section article {
   height: 80vh;
-  width: 70vw;
-  border: 2px solid #000;
+  width: 60vw;
+  border: dotted #888;
   display: grid;
   place-content: center;
   padding: 1em;
@@ -93,22 +93,21 @@ section article {
   position: relative;
 }
 
-section article h2{
+section article h2 {
   text-align: center;
   font-family: var(--main-font);
   padding: 1em;
-    animation: slide-in 3s;
-
+  animation: slide-in 3s;
 }
 
-section article p{
+section article p {
   font-family: var(--link-font);
   text-align: just;
-    animation: slide-out 1.5s;
-
+  animation: slide-out 1.5s;
+  padding: 1em;
 }
 
-section article::before{
+section article::before {
   content: " ";
   display: block;
   height: 60px;
@@ -120,7 +119,7 @@ section article::before{
   animation: spin 1.5s linear;
 }
 
-section article::after{
+section article::after {
   content: " ";
   display: block;
   height: 60px;
@@ -172,8 +171,7 @@ section article::after{
   } */
 }
 
-@keyframes slide-in{
-  
+@keyframes slide-in {
   from {
     transform: translateY(-30px);
   }
@@ -182,12 +180,130 @@ section article::after{
   }
 }
 
-@keyframes slide-out{
-  
+@keyframes slide-out {
   from {
     transform: translateY(30px);
   }
   to {
     transform: translateY(0);
+  }
+}
+
+/* screen break */
+
+@media (max-width: 916px) {
+  /* main section {
+    background: red;
+  } */
+
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  main {
+    width: 100%;
+    height: 100%;
+    /* background: red; */
+    display: grid;
+    place-content: space-between;
+    position: relative;
+    grid-template-areas:
+      "a a a a"
+      "a a a a "
+      "b b b b ";
+  }
+
+  nav {
+    background: #000;
+    min-height: auto;
+    grid-area: b;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em;
+    animation: nav 1s;
+  }
+
+  nav ul {
+    display: flex;
+  }
+  nav ul li {
+    display: block;
+    list-style: none;
+    padding: 0.3rem;
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1em;
+  }
+
+  nav ul li p {
+    color: #000;
+    opacity: 0;
+    transition: 1s;
+    transition: opacity 0.2s;
+    transition: transform 0.25s 0.1s;
+    font-family: var(--link-font);
+    font-weight: 700;
+  }
+
+  nav ul li:hover p {
+    opacity: 1;
+    transform: translateX(10px);
+  }
+
+  nav ul li a {
+    overflow: hidden;
+    transition: 0.3s;
+    /* padding: 1em; */
+    height: 50px;
+    width: 50px;
+    display: grid;
+    place-content: center;
+  }
+
+  nav ul li:hover a {
+    border: 2px solid white;
+    border-radius: 50%;
+    transform: translateX(-5px);
+  }
+
+  i {
+    color: aliceblue;
+  }
+
+  section {
+    display: grid;
+    place-content: center;
+    grid-area: a;
+  }
+
+  section article {
+    height: 80vh;
+    width: 60vw;
+    border: dotted #888;
+    display: grid;
+    place-content: center;
+    padding: 1em;
+    text-align: justify;
+    position: relative;
+  }
+
+  section article h2 {
+    text-align: center;
+    font-family: var(--main-font);
+    padding: 1em;
+    animation: slide-in 3s;
+  }
+
+  section article p {
+    font-family: var(--link-font);
+    text-align: just;
+    animation: slide-out 1.5s;
+    padding: 1em;
   }
 }
