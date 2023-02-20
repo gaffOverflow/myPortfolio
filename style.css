@@ -26,7 +26,7 @@ nav {
   display: flex;
   align-items: center;
   padding-left: 2.5em;
-  animation: nav 1s;
+  animation: nav 1.5s;
 }
 
 nav ul li {
