@@ -47,7 +47,7 @@ nav ul li p {
   transition: 1s;
   transition: opacity 0.2s;
   transition: transform 0.25s 0.1s;
-  font-family: 'Cardo', serif;
+  font-family: "Cardo", serif;
   font-weight: 700;
 }
 
@@ -79,60 +79,29 @@ i {
 article {
   display: grid;
   place-content: center;
-  gap: 1em;
-}
-article h1 {
-  font-family: var(--main-font);
-}
-
-.img {
-  position: absolute;
-  top: 50%;
-  left: 25%;
-  transform: translateY(-50%);
-  width: 20%;
-  height: 40%;
-  aspect-ratio: 1;
-}
-
-.img::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  position: absolute;
-  z-index: -100;
-  top: 20px;
-  left: -20px;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-}
-
-article div {
-  display: flex;
-  gap: 1em;
 }
 
 article p {
-  font-weight: 700;
-  font-size: 1.5rem;
+  height: 80vh;
+  width: 70vw;
+  border: 2px solid #000;
+  display: grid;
+  place-content: center;
+  padding: 1em;
+  text-align: justify;
+  position: relative;
 }
 
-article button {
-  padding: 1em 1.5em;
-  font-weight: 600;
-  transition: 0.3s;
-}
-article button:hover {
-  padding: 1em 1.5em;
-  font-weight: 600;
-  color: #fff;
+article p::before {
+  content: " ";
+  display: block;
+  height: 60px;
+  width: 60px;
   background: #000;
-  cursor: pointer;
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  animation: spin 1.5s linear;
 }
 
 @keyframes nav {
@@ -142,4 +111,29 @@ article button:hover {
   to {
     transform: translateX(0%);
   }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+  /* 
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  } */
 }
