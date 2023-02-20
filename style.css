@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   --main-font: "Chonburi", cursive;
+  --link-font: 'Cardo', serif;
   outline: 1px solid green;
 }
 
@@ -46,7 +47,7 @@ nav ul li p {
   opacity: 0;
   transition: opacity 0.1s;
   transition: transform 0.25s 0.1s;
-  font-family: "Cardo", serif;
+  font-family: var(--link-font);
 }
 
 nav ul li:hover p {
@@ -74,12 +75,12 @@ i {
   color: aliceblue;
 }
 
-article {
+section {
   display: grid;
   place-content: center;
   gap: 1em;
 }
-article h1 {
+section h1 {
   font-family: var(--main-font);
 }
 
@@ -110,23 +111,23 @@ img {
   height: 100%;
 }
 
-article div {
+section div {
   display: flex;
   gap: 1em;
 }
 
-article p {
+section p {
   font-weight: 700;
   font-size: 1.5rem;
 }
 
-article button {
+section button {
   padding: 1rem 1.5rem;
   font-weight: 600;
   transition: 0.3s;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-article button:hover {
+section button:hover {
   color: #fff;
   background: #000;
   cursor: pointer;
