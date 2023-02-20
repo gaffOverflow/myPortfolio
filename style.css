@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   --main-font: "Chonburi", cursive;
-  --link-font: 'Cardo', serif;
+  --link-font: "Cardo", serif;
   outline: 1px solid green;
 }
 
@@ -75,13 +75,27 @@ i {
   color: aliceblue;
 }
 
-section {
+main section {
   display: grid;
   place-content: center;
   gap: 1em;
+  animation: slide-in 1.5s;
 }
-section h1 {
+
+main section h1 {
   font-family: var(--main-font);
+  position: relative;
+}
+
+main section h1::before {
+  content: " ";
+  display: block;
+  height: 120px;
+  width: 5px;
+  background: #000;
+  position: absolute;
+  left: -35px;
+  animation: grow 2.5s;
 }
 
 .img {
@@ -139,5 +153,23 @@ section button:hover {
   }
   to {
     transform: translateX(0%);
+  }
+}
+
+@keyframes grow {
+  from {
+    height: 30px;
+  }
+  to {
+    height: 120px;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(50px);
+  }
+  to {
+    transform: translateX(0);
   }
 }
