@@ -44,20 +44,20 @@ nav ul li {
 nav ul li p {
   color: #fff;
   opacity: 0;
-  transition: 1s;
-  transition: opacity 0.2s;
+  transition: opacity 0.1s;
   transition: transform 0.25s 0.1s;
+  font-family: "Cardo", serif;
 }
 
 nav ul li:hover p {
   opacity: 1;
   transform: translateX(10px);
+  display: block;
 }
 
 nav ul li a {
   overflow: hidden;
   transition: 0.3s;
-  /* padding: 1em; */
   height: 50px;
   width: 50px;
   display: grid;
@@ -121,13 +121,12 @@ article p {
 }
 
 article button {
-  padding: 1em 1.5em;
+  padding: 1rem 1.5rem;
   font-weight: 600;
   transition: 0.3s;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 article button:hover {
-  padding: 1em 1.5em;
-  font-weight: 600;
   color: #fff;
   background: #000;
   cursor: pointer;
