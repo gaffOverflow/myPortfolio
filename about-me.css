@@ -192,9 +192,6 @@ section article::after {
 /* screen break */
 
 @media (max-width: 916px) {
-  /* main section {
-    background: red;
-  } */
 
   body {
     width: 100vw;
@@ -204,7 +201,6 @@ section article::after {
   main {
     width: 100%;
     height: 100%;
-    /* background: red; */
     display: grid;
     place-content: space-between;
     position: relative;
