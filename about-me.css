@@ -218,12 +218,17 @@ section article::after {
     background: #000;
     min-height: auto;
     grid-area: b;
-    height: auto;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.5em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: .5em;
     animation: nav 1s;
+    z-index: 1;
   }
 
   nav ul {
@@ -235,7 +240,7 @@ section article::after {
     padding: 0.3rem;
     /* overflow: hidden; */
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     gap: 1em;
@@ -249,6 +254,7 @@ section article::after {
     transition: transform 0.25s 0.1s;
     font-family: var(--link-font);
     font-weight: 700;
+    display: none;
   }
 
   nav ul li:hover p {
@@ -260,8 +266,8 @@ section article::after {
     overflow: hidden;
     transition: 0.3s;
     /* padding: 1em; */
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     display: grid;
     place-content: center;
   }
@@ -284,7 +290,7 @@ section article::after {
 
   section article {
     height: 80vh;
-    width: 60vw;
+    width: 80vw;
     border: dotted #888;
     display: grid;
     place-content: center;
