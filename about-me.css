@@ -226,9 +226,18 @@ section article::after {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: .5em;
-    animation: nav 1s;
+    padding: 0.5em;
+    animation: slide-up 1.5s;
     z-index: 1;
+  }
+
+  @keyframes slide-up {
+    from {
+      bottom: -35px;
+    }
+    to {
+      bottom: 0;
+    }
   }
 
   nav ul {
@@ -299,11 +308,27 @@ section article::after {
     position: relative;
   }
 
+  section article::before,
+  section article::after {
+    height: 30px;
+    width: 30px;
+  }
+
+  section article::after {
+    bottom: -15px;
+    right: -15px;
+  }
+
+  section article::before {
+    top: -15px;
+    left: -15px;
+  }
+
   section article h2 {
     text-align: center;
     font-family: var(--main-font);
-    padding: 1em;
-    animation: slide-in 3s;
+    padding: 0.5em;
+    animation: slide-in 2s;
   }
 
   section article p {
@@ -311,5 +336,7 @@ section article::after {
     text-align: just;
     animation: slide-out 1.5s;
     padding: 1em;
+    height: 100vmin;
+    overflow-y: scroll;
   }
 }
