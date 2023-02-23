@@ -82,17 +82,24 @@ section {
   place-content: center;
 }
 
-section article {
+section .card-container {
   height: 80vh;
-  width: 60vw;
+  width: 70vw;
   border: dotted #888;
-  display: grid;
-  place-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
   padding: 1em;
   text-align: justify;
   position: relative;
 }
 
+.card{
+  height: calc(100vh / 3);
+  width: calc(100vw / 4);
+  border: 1px solid #000;
+}
 
 @keyframes nav {
   from {
