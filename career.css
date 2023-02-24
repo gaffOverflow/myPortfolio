@@ -83,19 +83,31 @@ section {
 }
 
 section .card-container {
-  height: 80vh;
+  /* height: 80vh; */
   width: 70vw;
-  border: dotted #888;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   gap: 1em;
-  padding: 1em;
-  text-align: justify;
-  position: relative;
 }
 
-.card{
+ section .card-container h3{
+    padding: .5em;
+    font-size: 30px;
+    font-family: var(--main-font);
+  }
+
+.cards {
+  width: 100%;
+  display: flex;
+  gap: 1em;
+  padding-inline: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
   height: calc(100vh / 3);
   width: calc(100vw / 4);
   border: 1px solid #000;
@@ -262,4 +274,36 @@ section .card-container {
     grid-area: a;
   }
 
+  section .card-container {
+    margin-bottom: 6rem;
+    margin-top: 2rem;
+  }
+
+  section .card-container h3{
+    padding: .5em;
+    font-size: 20px;
+  }
+
+  section .card-container .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    width: calc(100vw / 1.5);
+  }
 }
+
+/*
+section
+
+.card-container
+
+h3-------h3
+div
+.card*3
+div
+
+.card-container
+
+section
+*/
