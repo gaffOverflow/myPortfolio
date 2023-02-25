@@ -92,11 +92,11 @@ section .card-container {
   gap: 1em;
 }
 
- section .card-container h3{
-    padding: .5em;
-    font-size: 30px;
-    font-family: var(--main-font);
-  }
+section .card-container h3 {
+  padding: 0.5em;
+  font-size: 30px;
+  font-family: var(--main-font);
+}
 
 .cards {
   width: 100%;
@@ -110,7 +110,32 @@ section .card-container {
 .card {
   height: calc(100vh / 3);
   width: calc(100vw / 4);
-  border: 1px solid #000;
+  /* border: 2px solid #fff; */
+  border-radius: 10px;
+  background: #111;
+  transition: 0.3s;
+}
+
+.card:first-of-type {
+  animation: nav 2s;
+}
+
+.card:last-of-type {
+  animation: move-in 2s;
+}
+
+.card:hover {
+  background: #fff;
+  border: 2px solid #000;
+}
+
+@keyframes move-in {
+  from {
+    transform: translateX(30px);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 @keyframes nav {
@@ -279,8 +304,8 @@ section .card-container {
     margin-top: 2rem;
   }
 
-  section .card-container h3{
-    padding: .5em;
+  section .card-container h3 {
+    padding: 0.5em;
     font-size: 20px;
   }
 
@@ -291,19 +316,12 @@ section .card-container {
   .card {
     width: calc(100vw / 1.5);
   }
+
+  .card:first-of-type {
+    animation: slide-in 2s;
+  }
+
+  .card:last-of-type {
+    animation: none;
+  }
 }
-
-/*
-section
-
-.card-container
-
-h3-------h3
-div
-.card*3
-div
-
-.card-container
-
-section
-*/
