@@ -4,7 +4,7 @@
   box-sizing: border-box;
   --main-font: "Chonburi", cursive;
   --link-font: "Cardo", serif;
-  outline: 1px solid green;
+  /* outline: 1px solid green; */
 }
 
 body {
@@ -110,7 +110,7 @@ section .card-container h3 {
 .card {
   height: calc(100vh / 3);
   width: calc(100vw / 4);
-  /* border: 2px solid #fff; */
+  border: 2px solid #bbb;
   border-radius: 10px;
   background: #111;
   transition: 0.3s;
