@@ -119,11 +119,11 @@ section .card-container h3 {
   grid-template-rows: auto auto;
 }
 
-.card:hover .fa-brands, .card:hover h6{
+.card:hover .icon, .card:hover h6{
 color: #000;
 }
 
-.fa-wordpress{
+.icon{
 font-size: 150px;
 }
 
