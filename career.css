@@ -114,10 +114,29 @@ section .card-container h3 {
   border-radius: 10px;
   background: #111;
   transition: 0.3s;
+  display: grid;
+  place-content: center;
+  grid-template-rows: auto auto;
+}
+
+.card:hover .fa-brands, .card:hover h6{
+color: #000;
+}
+
+.fa-wordpress{
+font-size: 150px;
 }
 
 .card:first-of-type {
   animation: nav 2s;
+}
+
+.card h6{
+  text-align: center;
+  color: #fff;
+  font-family: var(--link-font);
+  padding-top: 1em;
+  font-size: clamp(16px, 50%, 32px);
 }
 
 .card:last-of-type {
