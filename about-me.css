@@ -4,7 +4,7 @@
   box-sizing: border-box;
   --main-font: "Chonburi", cursive;
   --link-font: "Cardo", serif;
-  outline: 1px solid green;
+  /* outline: 1px solid green; */
 }
 
 body {
@@ -21,7 +21,7 @@ main {
   position: relative;
 }
 
-nav {
+nav { 
   background: #000;
   min-height: 100vh;
   display: flex;
