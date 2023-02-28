@@ -10,6 +10,19 @@
 body {
   width: 100vw;
   height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: inset(100%);
+  background: #fff;
+  z-index: 1;
+  animation: review 6s;
+  transition:   clip-path .1s linear;
 }
 
 main {
@@ -84,6 +97,7 @@ section {
 
 section h3 {
   padding-block: 2em;
+  font-family: var(--main-font);
 }
 
 section article {
@@ -97,6 +111,7 @@ section article {
 
 section article .date {
   font-weight: 700;
+  font-size: clamp(15px, 50%, 40px);
 }
 
 section article .experience h6 {
@@ -149,6 +164,14 @@ section article::after {
   right: -30px;
   animation: spin 1.5s linear;
 } */
+@keyframes review{
+  from{
+  clip-path: inset(40% 0 14% 21%);
+  }
+  to{
+  clip-path: inset(100% 0 0 20%);
+  }
+}
 
 @keyframes nav {
   from {
@@ -213,7 +236,7 @@ section article::after {
 @media (max-width: 916px) {
   body {
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
   }
 
   main {
@@ -315,6 +338,15 @@ section article::after {
     width: 80vw;
     gap: 1em;
   }
+
+  @keyframes review{
+  from{
+  clip-path: inset(20% 0 14% 0);
+  }
+  to{
+  clip-path: inset(100% 0 0 20%);
+  }
+}
   /* section article {
     height: 80vh;
     width: 80vw;
