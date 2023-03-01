@@ -128,43 +128,12 @@ hr {
   background: #000;
 }
 
-/* section article h2 {
-  text-align: center;
-  font-family: var(--main-font);
-  padding: 1em;
-  animation: slide-in 3s;
+.download{
+display: grid;
+place-content: center;
+ width: 65vw;
 }
 
-section article p {
-  font-family: var(--link-font);
-  text-align: just;
-  animation: slide-out 1.5s;
-  padding: 1em;
-}
-
-section article::before {
-  content: " ";
-  display: block;
-  height: 60px;
-  width: 60px;
-  background: #000;
-  position: absolute;
-  top: -30px;
-  left: -30px;
-  animation: spin 1.5s linear;
-}
-
-section article::after {
-  content: " ";
-  display: block;
-  height: 60px;
-  width: 60px;
-  background: #000;
-  position: absolute;
-  bottom: -30px;
-  right: -30px;
-  animation: spin 1.5s linear;
-} */
 @keyframes review{
   from{
   clip-path: inset(40% 0 14% 21%);
@@ -205,13 +174,7 @@ section article::after {
   100% {
     transform: rotate(0deg);
   }
-  /* 
-  from {
-    transform: rotate(180deg);
-  }
-  to {
-    transform: rotate(-180deg);
-  } */
+
 }
 
 @keyframes slide-in {
@@ -348,50 +311,5 @@ section article::after {
   clip-path: inset(100% 0 0 20%);
   }
 }
-  /* section article {
-    height: 80vh;
-    width: 80vw;
-    border: dotted #888;
-    display: grid;
-    place-content: center;
-    padding: 1em;
-    text-align: justify;
-    position: relative;
-  }
-
-  section article::before,
-  section article::after {
-    height: 30px;
-    width: 30px;
-  }
-
-  section article::after {
-    bottom: -15px;
-    right: -15px;
-  }
-
-  section article::before {
-    top: -15px;
-    left: -15px;
-  }
-
-  section article h2 {
-    text-align: center;
-    font-family: var(--main-font);
-    padding: 0.5em;
-    animation: slide-in 2s;
-  }
-
-  section article p {
-    font-family: var(--link-font);
-    text-align: just;
-    animation: slide-out 1.5s;
-    padding: 1em;
-    height: 90%;
-    overflow-y: scroll;
-  }
-
-  section article p::-webkit-scrollbar {
-    display: none;
-  } */
+  
 }
