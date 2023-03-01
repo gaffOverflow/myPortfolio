@@ -101,6 +101,7 @@ section .card-container h3 {
 
 .cards {
   width: 100%;
+  /* display: flex; */
   display: grid;
   place-content: center;
   grid-template-columns: repeat(3, 1fr);
@@ -108,16 +109,16 @@ section .card-container h3 {
   padding-inline: 1em;
   /* justify-content: center;
   align-items: center;
-  flex-wrap: wrap; */
+  flex-wrap: wrap;  */
 }
 
 .card {
-  height: calc(100vh / 3);
-  width: calc(100vw / 4);
+  height: calc(100vh / 4);
+  width: calc(100vw / 5);
   border: 2px solid #bbb;
   border-radius: 10px;
   background: #111;
-  transition: 0.3s;
+  transition: 0.3s; 
   display: grid;
   place-content: center;
   grid-template-rows: auto auto;
