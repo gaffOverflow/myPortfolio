@@ -5,6 +5,7 @@
   --main-font: "Chonburi", cursive;
   --link-font: "Cardo", serif;
   /* outline: 1px solid green; */
+  font-family: var(--link-font);
 }
 
 body {
@@ -19,6 +20,7 @@ main {
   grid-template-columns: 100px 2fr;
   place-content: center;
   position: relative;
+  background: #000;
 }
 
 nav {
@@ -28,7 +30,6 @@ nav {
   align-items: center;
   padding: 1.5em;
   animation: nav 1s;
-  
 }
 
 nav ul li {
@@ -44,7 +45,7 @@ nav ul li {
 }
 
 nav ul li p {
-  color: #000;
+  color: #fff;
   opacity: 0;
   transition: 1s;
   transition: opacity 0.2s;
@@ -81,10 +82,52 @@ i {
 section {
   display: grid;
   place-content: center;
+  color: #fff;
 }
 
-section .card-container {
-  /* height: 80vh; */
+section h3 {
+  text-align: center;
+  font-family: var(--main-font);
+}
+
+form input,
+textarea {
+  display: block;
+  width: 65svw;
+  height: 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  margin-top: 15px;
+  border: none;
+  border-radius: 3px;
+}
+
+.half {
+  display: flex;
+  gap: 1rem;
+}
+
+.half input {
+  width: 50%;
+}
+
+input::placeholder {
+  color: #fff;
+  padding-left: 10px;
+}
+
+textarea {
+  height: auto;
+}
+
+button {
+  display: block;
+  margin: 1rem auto;
+  padding: 1em 2em;
+  background: grey;
+  cursor: pointer;
+}
+/* section .card-container {
+  height: 80vh;
   width: 70vw;
   display: flex;
   justify-content: center;
@@ -101,15 +144,15 @@ section .card-container h3 {
 
 .cards {
   width: 100%;
-  /* display: flex; */
+  display: flex;
   display: grid;
   place-content: center;
   grid-template-columns: repeat(3, 1fr);
   gap: 1em;
   padding-inline: 1em;
-  /* justify-content: center;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;  */
+  flex-wrap: wrap; 
 }
 
 .card {
@@ -118,7 +161,7 @@ section .card-container h3 {
   border: 2px solid #bbb;
   border-radius: 10px;
   background: #111;
-  transition: 0.3s; 
+  transition: 0.3s;
   display: grid;
   place-content: center;
   grid-template-rows: auto auto;
@@ -153,7 +196,7 @@ section .card-container h3 {
 .card:hover {
   background: #fff;
   border: 2px solid #000;
-}
+} */
 
 @keyframes move-in {
   from {
@@ -228,6 +271,7 @@ section .card-container h3 {
   body {
     width: 100vw;
     height: 100vh;
+    background: #000;
   }
 
   main {
@@ -325,29 +369,12 @@ section .card-container h3 {
     grid-area: a;
   }
 
+  form input,
+  textarea {
+    width: 100%;
+  }
   section .card-container {
     margin-bottom: 6rem;
     margin-top: 2rem;
-  }
-
-  section .card-container h3 {
-    padding: 0.5em;
-    font-size: 20px;
-  }
-
-  section .card-container .cards {
-    flex-direction: column;
-  }
-
-  .card {
-    width: calc(100vw / 1.5);
-  }
-
-  .card:first-of-type {
-    animation: slide-in 2s;
-  }
-
-  .card:last-of-type {
-    animation: none;
   }
 }
