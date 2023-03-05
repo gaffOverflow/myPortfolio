@@ -63,6 +63,7 @@ nav ul li a {
   width: 50px;
   display: grid;
   place-content: center;
+  text-decoration: none;
 }
 
 nav ul li:hover a {
@@ -106,6 +107,10 @@ main section h1::before {
   width: 20%;
   height: 40%;
   aspect-ratio: 1;
+}
+
+img {
+  object-fit: cover;
 }
 
 .img::before {
@@ -177,7 +182,6 @@ section button:hover {
 }
 
 @media (max-width: 916px) {
-
   body {
     width: 100vw;
     height: 100vh;
@@ -189,6 +193,7 @@ section button:hover {
     display: grid;
     place-content: space-between;
     position: relative;
+    overflow: hidden;
     grid-template-areas:
       "c c c c"
       "a a a a "
@@ -223,6 +228,7 @@ section button:hover {
 
   nav ul {
     display: flex;
+    gap: 2vw;
   }
   nav ul li {
     display: block;
@@ -237,13 +243,6 @@ section button:hover {
   }
 
   nav ul li p {
-    color: #000;
-    opacity: 0;
-    transition: 1s;
-    transition: opacity 0.2s;
-    transition: transform 0.25s 0.1s;
-    font-family: var(--link-font);
-    font-weight: 700;
     display: none;
   }
 
@@ -279,45 +278,42 @@ section button:hover {
     /* background: red; */
   }
 
-  main {
-    background: green;
-  }
-  main nav ul li:hover p{
+  main nav ul li:hover p {
     display: none;
   }
 
   .img {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 170px;
-  height: 200px;
-  aspect-ratio: 1;
-  grid-area: c;
-}
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 170px;
+    height: 200px;
+    aspect-ratio: 1;
+    grid-area: c;
+  }
 
-.img::before {
-  content: "";
-  display: block;
-  width: 120%;
-  height: 100%;
-  background: #000;
-  position: absolute;
-  z-index: -100;
-  top: 20px;
-  left: -10%;
-}
+  .img::before {
+    content: "";
+    display: block;
+    width: 120%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    z-index: -100;
+    top: 20px;
+    left: -10%;
+  }
 
-img {
-  width: 100%;
-  height: 100%;
-  animation: none;
-}
+  img {
+    width: 100%;
+    height: 100%;
+    animation: none;
+  }
 
-/* to later work on */
+  /* to later work on */
 
-/* @keyframes go-back{
+  /* @keyframes go-back{
   from{
     z-index: 1;
   }
@@ -326,7 +322,7 @@ img {
   } */
 }
 section h1 {
- text-align: center;
+  text-align: center;
 }
 
 section p {
