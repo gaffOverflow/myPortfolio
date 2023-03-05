@@ -122,9 +122,11 @@ textarea {
 button {
   display: block;
   margin: 1rem auto;
-  padding: 1em 2em;
+  padding: .5em 2em;
   background: grey;
+  border: 2px solid rgb(194, 174, 174);
   cursor: pointer;
+  border-radius: 5px;
 }
 /* section .card-container {
   height: 80vh;
@@ -367,12 +369,14 @@ section .card-container h3 {
     display: grid;
     place-content: center;
     grid-area: a;
+    padding: 1rem;
   }
 
   form input,
   textarea {
     width: 100%;
   }
+
   section .card-container {
     margin-bottom: 6rem;
     margin-top: 2rem;
