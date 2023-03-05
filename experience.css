@@ -73,6 +73,7 @@ nav ul li:hover p {
 nav ul li a {
   overflow: hidden;
   transition: 0.3s;
+  text-decoration: none;
   /* padding: 1em; */
   height: 50px;
   width: 50px;
