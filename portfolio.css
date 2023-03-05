@@ -28,7 +28,6 @@ nav {
   align-items: center;
   padding: 1.5em;
   animation: nav 1s;
-  
 }
 
 nav ul li {
@@ -61,6 +60,7 @@ nav ul li:hover p {
 nav ul li a {
   overflow: hidden;
   transition: 0.3s;
+  text-decoration: none;
   /* padding: 1em; */
   height: 50px;
   width: 50px;
@@ -118,7 +118,7 @@ section .card-container h3 {
   border: 2px solid #bbb;
   border-radius: 10px;
   background: #111;
-  transition: 0.3s; 
+  transition: 0.3s;
   display: grid;
   place-content: center;
   grid-template-rows: auto auto;
@@ -274,8 +274,8 @@ section .card-container h3 {
   nav ul li {
     display: block;
     list-style: none;
-    padding: 0.3rem;
-    /* overflow: hidden; */
+    padding: 0.45rem;
+     /* overflow: hidden; */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -336,8 +336,8 @@ section .card-container h3 {
   }
 
   section .card-container .cards {
-    flex-direction: column;
-  }
+  grid-template-columns: none;
+}
 
   .card {
     width: calc(100vw / 1.5);
