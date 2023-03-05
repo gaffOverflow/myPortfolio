@@ -28,7 +28,6 @@ nav {
   align-items: center;
   padding: 1.5em;
   animation: nav 1s;
-  
 }
 
 nav ul li {
@@ -61,6 +60,7 @@ nav ul li:hover p {
 nav ul li a {
   overflow: hidden;
   transition: 0.3s;
+  text-decoration: none;
   /* padding: 1em; */
   height: 50px;
   width: 50px;
@@ -270,7 +270,7 @@ section .card-container h3 {
   nav ul li {
     display: block;
     list-style: none;
-    padding: 0.3rem;
+    padding: 0.45rem;
     /* overflow: hidden; */
     display: flex;
     flex-direction: column;
