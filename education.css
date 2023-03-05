@@ -5,7 +5,6 @@
   --main-font: "Chonburi", cursive;
   --link-font: "Cardo", serif;
   /* outline: 1px solid green; */
-  color: red;
 }
 
 body {
@@ -94,6 +93,7 @@ i {
 section {
   display: grid;
   place-content: center;
+  margin-left: 5rem;
 }
 
 section h3 {
@@ -128,10 +128,16 @@ hr {
   background: #000;
 }
 
-.download{
-display: grid;
-place-content: center;
- width: 65vw;
+  .download {
+    display: grid;
+    place-content: center;
+    width: 80vw;
+  }
+
+button{
+  padding: .5em 1.5em;
+  cursor: pointer;
+  font-family: var(--link-font);
 }
 
 @keyframes review{
@@ -174,7 +180,13 @@ place-content: center;
   100% {
     transform: rotate(0deg);
   }
-
+  /* 
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  } */
 }
 
 @keyframes slide-in {
@@ -247,7 +259,7 @@ place-content: center;
   nav ul li {
     display: block;
     list-style: none;
-    padding: 0.3rem;
+    padding: 0.45rem;
     /* overflow: hidden; */
     display: flex;
     flex-direction: column;
@@ -296,6 +308,7 @@ place-content: center;
     display: grid;
     place-content: center;
     grid-area: a;
+    margin-inline: 1rem;
   }
 
   section article {
@@ -311,5 +324,5 @@ place-content: center;
   clip-path: inset(100% 0 0 20%);
   }
 }
-  
+
 }
