@@ -90,7 +90,7 @@ section h3 {
   font-family: var(--main-font);
 }
 
-form input,
+input,
 textarea {
   display: block;
   width: 65svw;
@@ -122,11 +122,16 @@ textarea {
 button {
   display: block;
   margin: 1rem auto;
-  padding: .5em 2em;
+  padding: 0.5em 2em;
   background: grey;
   border: 2px solid rgb(194, 174, 174);
   cursor: pointer;
   border-radius: 5px;
+  transition: .2s;
+}
+
+button:active {
+  transform: scale(80%);
 }
 
 @keyframes move-in {
@@ -169,13 +174,6 @@ button {
   100% {
     transform: rotate(0deg);
   }
-  /* 
-  from {
-    transform: rotate(180deg);
-  }
-  to {
-    transform: rotate(-180deg);
-  } */
 }
 
 @keyframes slide-in {
@@ -301,7 +299,7 @@ button {
     padding: 1rem;
   }
 
-  form input,
+  div input,
   textarea {
     width: 100%;
   }
