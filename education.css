@@ -22,7 +22,7 @@ body::before {
   background: #fff;
   z-index: 1;
   animation: review 6s;
-  transition:   clip-path .1s linear;
+  transition: clip-path 0.1s linear;
 }
 
 main {
@@ -94,7 +94,7 @@ i {
 section {
   display: grid;
   place-content: center;
-  margin-left: 5rem;
+  margin-inline: 7rem;
 }
 
 section h3 {
@@ -104,7 +104,7 @@ section h3 {
 
 section article {
   width: 65vw;
-  gap: 4em;
+  gap: 7em;
   display: grid;
   grid-template-columns: auto minmax(200px, 1fr);
   text-align: justify;
@@ -129,24 +129,24 @@ hr {
   background: #000;
 }
 
-  .download {
-    display: grid;
-    place-content: center;
-    width: 80vw;
-  }
+.download {
+  display: grid;
+  place-content: center;
+  width: 80vw;
+}
 
-button{
-  padding: .5em 1.5em;
+button {
+  padding: 0.5em 1.5em;
   cursor: pointer;
   font-family: var(--link-font);
 }
 
-@keyframes review{
-  from{
-  clip-path: inset(40% 0 14% 21%);
+@keyframes review {
+  from {
+    clip-path: inset(30% 0 14% 10%);
   }
-  to{
-  clip-path: inset(100% 0 0 20%);
+  to {
+    clip-path: inset(100% 0 0 20%);
   }
 }
 
@@ -317,13 +317,12 @@ button{
     gap: 1em;
   }
 
-  @keyframes review{
-  from{
-  clip-path: inset(20% 0 14% 0);
+  @keyframes review {
+    from {
+      clip-path: inset(20% 0 14% 0);
+    }
+    to {
+      clip-path: inset(100% 0 0 20%);
+    }
   }
-  to{
-  clip-path: inset(100% 0 0 20%);
-  }
-}
-
 }
