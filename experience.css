@@ -22,7 +22,7 @@ body::before {
   background: #fff;
   z-index: 1;
   animation: review 6s;
-  transition:   clip-path .1s linear;
+  transition: clip-path 0.1s linear;
 }
 
 main {
@@ -165,12 +165,12 @@ section article::after {
   right: -30px;
   animation: spin 1.5s linear;
 } */
-@keyframes review{
-  from{
-  clip-path: inset(40% 0 14% 21%);
+@keyframes review {
+  from {
+    clip-path: inset(40% 0 14% 21%);
   }
-  to{
-  clip-path: inset(100% 0 0 20%);
+  to {
+    clip-path: inset(100% 0 0 20%);
   }
 }
 
@@ -333,6 +333,7 @@ section article::after {
     display: grid;
     place-content: center;
     grid-area: a;
+    padding-bottom: 20vh;
   }
 
   section article {
@@ -340,14 +341,14 @@ section article::after {
     gap: 1em;
   }
 
-  @keyframes review{
-  from{
-  clip-path: inset(20% 0 14% 0);
+  @keyframes review {
+    from {
+      clip-path: inset(20% 0 14% 0);
+    }
+    to {
+      clip-path: inset(100% 0 0 20%);
+    }
   }
-  to{
-  clip-path: inset(100% 0 0 20%);
-  }
-}
   /* section article {
     height: 80vh;
     width: 80vw;
