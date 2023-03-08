@@ -112,11 +112,17 @@ section .card-container h3 {
   flex-wrap: wrap;  */
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .card {
   height: calc(100vh / 4);
   width: calc(100vw / 5);
   border: 2px solid #bbb;
   border-radius: 10px;
+  gap: 1rem;
   background: #111;
   transition: 0.3s;
   display: grid;
@@ -125,13 +131,15 @@ section .card-container h3 {
   position: relative;
 }
 
-.card:hover .icon,
-.card:hover h6 {
+.card:hover h6,
+.card:hover p {
   color: #000;
+  display: block;
 }
 
-.icon {
-  font-size: 150px;
+.card p {
+  text-align: center;
+  display: none;
 }
 
 .card:first-of-type {
@@ -275,7 +283,7 @@ section .card-container h3 {
     display: block;
     list-style: none;
     padding: 0.45rem;
-     /* overflow: hidden; */
+    /* overflow: hidden; */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -336,8 +344,8 @@ section .card-container h3 {
   }
 
   section .card-container .cards {
-  grid-template-columns: none;
-}
+    grid-template-columns: none;
+  }
 
   .card {
     width: calc(100vw / 1.5);
